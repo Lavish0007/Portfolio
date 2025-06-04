@@ -113,7 +113,7 @@ export function About() {
               <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-teal-500">
                 Turning ideas into scalable digital solutions —
               </span>{" "}
-              I'm a second-year B.Tech student with a strong drive to build the future through code. Passionate about full-stack web development and competitive programming, I focus on creating real-world, impactful tech experiences. Currently open to internship opportunities where I can contribute, learn, and grow alongside industry professionals.
+              I&apos;m a second-year B.Tech student with a strong drive to build the future through code. Passionate about full-stack web development and competitive programming, I focus on creating real-world, impactful tech experiences. Currently open to internship opportunities where I can contribute, learn, and grow alongside industry professionals.
             </p>
             
             <div className="space-y-4">

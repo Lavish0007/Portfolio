@@ -73,7 +73,7 @@ export function Contact() {
           Get In Touch
         </h2>
         <p className="text-lg text-gray-400 text-center mb-12 animate-pulse">
-          💌 Let's collaborate! I'm always excited to discuss new opportunities.
+          💌 Let&apos;s collaborate! I&apos;m always excited to discuss new opportunities.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           <form onSubmit={handleSubmit} className="space-y-6">

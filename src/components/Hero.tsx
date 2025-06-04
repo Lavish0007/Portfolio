@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-import Link from "next/link";
-
 export function Hero() {
   const [mounted, setMounted] = useState(false);
 
@@ -13,7 +11,7 @@ export function Hero() {
   }, []);
 
   if (!mounted) {
-    return null; // or a loading skeleton
+    return null;
   }
 
   return (
@@ -45,8 +43,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            🧠 Logical thinker. 🎯 Creative builder. ⚛️ React & Next.js are my tools of choice to make the web intuitive and user-first.
-
+            🧠 Logical thinker. 🎯 Creative builder. ⚛️ React &amp; Next.js are my tools of choice to make the web intuitive and user-first.
           </motion.p>
 
           <motion.div 
@@ -61,7 +58,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Let's Connect
+              Let&apos;s Connect
             </a>
 
             <a 
@@ -95,8 +92,6 @@ export function Hero() {
           </div>
         </motion.div>
       </div>
-
-      
 
       {/* Scroll Indicator */}
       <motion.div 

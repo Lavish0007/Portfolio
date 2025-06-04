@@ -1,3 +1,4 @@
+git push -u origin main
 # Lavish Patel's Portfolio
 
 A modern, animated portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
