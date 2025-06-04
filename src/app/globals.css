@@ -1,0 +1,176 @@
+@import '../styles/animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --gradient-start: #2563eb;
+    --gradient-mid: #9333ea;
+    --gradient-end: #14b8a6;
+    cursor: none;
+  }
+
+  body {
+    @apply bg-black text-white;
+    cursor: none;
+  }
+
+  a, button {
+    cursor: none;
+  }
+}
+
+@layer components {
+  /* Custom Cursor */
+  .custom-cursor {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+  }
+
+  .custom-cursor.clicking {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  .custom-cursor-follower {
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+    mix-blend-mode: difference;
+  }
+
+  .custom-cursor-follower.clicking {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  .custom-cursor-follower.hover {
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  /* Project Cards */
+  .project-card {
+    @apply relative overflow-hidden rounded-xl transition-all duration-300;
+    background: #f3f4f6; /* gray-100 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: rgba(75, 75, 75, 0.05);
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    background: #e5e7eb; /* gray-200 */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .project-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Project card links */
+  .project-card a {
+    @apply px-3 py-1.5 rounded-lg transition-all duration-300;
+  }
+
+  .project-card a:hover {
+    @apply bg-gray-200;
+  }
+
+  /* Other Components */
+  .hero-gradient {
+    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-teal-500 bg-clip-text text-transparent;
+  }
+
+  .contact-input {
+    @apply w-full px-4 py-2 bg-gray-800/50 rounded-lg border border-gray-700 focus:border-blue-500 focus:outline-none transition-colors;
+  }
+
+  .social-link {
+    @apply p-3 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-colors duration-300;
+  }
+
+  .cta-button {
+    @apply inline-block px-8 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-teal-500 rounded-full text-white font-semibold transition-all duration-300;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.5);
+  }
+
+  /* Enhanced button animations */
+  .download-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: 0.5s;
+  }
+
+  .download-btn:hover::before {
+    left: 100%;
+  }
+
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Project Cards Section */
+  #projects {
+    @apply bg-white py-20 px-4;
+  }
+}
