@@ -149,7 +149,7 @@ export function About() {
               Technical Expertise
             </h3>
             <p className="text-gray-600 leading-relaxed">
-            I'm passionate about writing clean, scalable code. Through hackathons and team projects, I explore AI integration to enhance functionality. I embrace challenges via open-source and competitions.
+            I&apos;m passionate about writing clean, scalable code. Through hackathons and team projects, I explore AI integration to enhance functionality. I embrace challenges via open-source and competitions.
             </p>
             
             <div className="space-y-4">
